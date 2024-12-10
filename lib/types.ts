@@ -44,6 +44,7 @@ export type Donation = {
   timestamp: string;
   amountInUsd: number;
   round: {
+    id: string;
     roundMetadata: RoundMetadata;
   };
   tokenAddress: string;

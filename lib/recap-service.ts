@@ -26,11 +26,9 @@ const mainnetChainsIds = getChains()
   .filter((chain) => chain.type === "mainnet")
   .map((chain) => chain.id);
 
-// Simulated API service
 export async function fetchRecapData(
   addressOrEns: string,
 ): Promise<RecapData | null> {
-  console.log("Fetching recap data for:", addressOrEns);
   let address: string | null = null;
   let ens: string | null = null;
 
@@ -124,6 +122,7 @@ const GET_DONATIONS_QUERY = gql`
       timestamp
       amountInUsd
       round {
+        id
         roundMetadata
       }
       tokenAddress
@@ -159,11 +158,10 @@ const fetchDonations = async (
       GET_DONATIONS_QUERY,
       variables,
     );
-
     return response.donations;
   } catch (error) {
     console.error("Error fetching donations:", error);
-    // throw error;
+    return [];
   }
 };
 
@@ -224,9 +222,13 @@ export const transformDonations = (
 
   donations.forEach((donation) => {
     const roundName =
-      donation.round.roundMetadata.name ?? donation.round.roundMetadata.title;
-    if(roundName === undefined) {
-      console.error("==> Missing expected properties on object:", donation);
+      donation.round.roundMetadata?.name ??
+      donation.round.roundMetadata?.title ??
+      `Round ${donation.round.id} on ${
+        getChainById(donation.chainId).prettyName
+      }`;
+    if (roundName === undefined) {
+      console.error("Missing expected properties on object:", donation);
       return;
     }
     if (!roundMap[roundName]) {
@@ -265,10 +267,12 @@ const getTotalAmountByChainId = (
     return acc;
   }, {} as Record<number, number>);
 
-  return Object.keys(result)
+  const sortedResult = Object.keys(result)
     .map((chainId) => ({
       chainId: parseInt(chainId),
       totalAmount: result[parseInt(chainId)],
     }))
     .sort((a, b) => b.totalAmount - a.totalAmount);
+
+  return sortedResult;
 };
