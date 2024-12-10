@@ -1,19 +1,10 @@
 "use client";
 
 import Head from "next/head";
-import { DM_Sans } from "next/font/google";
-
-const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function GlobalHead() {
   return (
     <Head>
-      <style jsx global>{`
-        html,
-        body {
-          font-family: ${dmSans.style.fontFamily};
-        }
-      `}</style>
       <script
         dangerouslySetInnerHTML={{
           __html: `
