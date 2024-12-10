@@ -194,11 +194,13 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
         className="mt-4"
       />
 
-      <ShareButtons
-        totalDonated={data.totalDonated}
-        projectsCount={data.projectsCount}
-        className="mt-6"
-      />
+      {data.ens !== "dummy1234.eth" && (
+        <ShareButtons
+          totalDonated={data.totalDonated}
+          projectsCount={data.projectsCount}
+          className="mt-6"
+        />
+      )}
     </div>
   );
 }

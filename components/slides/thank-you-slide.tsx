@@ -53,13 +53,13 @@ export function ThankYouSlide({
       <div className="text-center space-y-6 sm:space-y-8 px-4 max-w-xl">
         <motion.div animate={heartbeat}>
           <Heart
-            className={`w-16 h-16 sm:w-20 sm:h-20 mx-auto ${textStyle}`}
+            className={`w-14 h-14 sm:w-20 sm:h-20 mx-auto ${textStyle}`}
             strokeWidth={1}
           />
         </motion.div>
         <div className="space-y-4">
           <motion.h2
-            className="text-3xl sm:text-4xl font-bold tracking-tight"
+            className="text-xl sm:text-3xl sm:text-4xl font-bold tracking-tight"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}

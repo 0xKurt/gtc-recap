@@ -39,7 +39,7 @@ export function ChainsIntroSlide({
       }}
     >
       <div className="text-center space-y-8 px-4 max-w-xl">
-        <div className="relative h-32">
+        <div className="relative h-20 sm:h-32">
           <motion.div
             initial={{ scale: 0, rotate: -30 }}
             animate={{ scale: 1, rotate: 0 }}
@@ -49,9 +49,12 @@ export function ChainsIntroSlide({
               damping: 20,
               delay: 0.5,
             }}
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            className="absolute left-1/2 top-1/3 sm:top-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <Link className={`w-20 h-20 ${textStyle}`} strokeWidth={1} />
+            <Link
+              className={`w-12 h-12 sm:w-20 sm:h-20 ${textStyle}`}
+              strokeWidth={1}
+            />
           </motion.div>
 
           <motion.div
@@ -60,7 +63,10 @@ export function ChainsIntroSlide({
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Link className={`w-24 h-24 ${textStyle}`} strokeWidth={1} />
+            <Link
+              className={`w-14 h-14 sm:w-24 sm:h-24 ${textStyle}`}
+              strokeWidth={1}
+            />
           </motion.div>
         </div>
 

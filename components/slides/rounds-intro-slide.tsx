@@ -80,10 +80,10 @@ export function RoundsIntroSlide({
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.3, duration: 0.5 }}
           >
-            <span className={`text-5xl font-bold ${textStyle}`}>
+            <span className={`text-3xl sm:text-5xl font-bold ${textStyle}`}>
               {roundsCount}
             </span>
-            <span className="text-2xl font-medium ml-2">Rounds</span>
+            <span className="text-xl sm:text-2xl font-medium ml-2">Rounds</span>
           </motion.div>
 
           <motion.p

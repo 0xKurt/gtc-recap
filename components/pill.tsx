@@ -8,7 +8,7 @@ interface PillProps {
 const Pill: React.FC<PillProps> = ({ children, bgColor }) => {
   return (
     <div
-      className="inline-flex items-center px-3 py-1 rounded-full text-white"
+      className="inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-white"
       style={{ backgroundColor: bgColor }}
     >
       {children}

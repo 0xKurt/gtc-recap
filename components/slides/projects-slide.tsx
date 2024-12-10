@@ -78,7 +78,7 @@ export function ProjectsSlide({
             >
               <div className="flex items-center gap-3 sm:gap-4">
                 <motion.div
-                  className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 bg-white/50"
+                  className="relative w-10 h-10 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 bg-white/50"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: index * 0.15 + 0.3 }}
@@ -93,17 +93,27 @@ export function ProjectsSlide({
                   />
                 </motion.div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-base sm:text-lg font-semibold truncate">
-                    {project.name.length > 40
-                      ? project.name.slice(0, 40) + "..."
-                      : project.name}
-                  </h3>
-                  <p className={`text-xs sm:text-sm ${textStyle} truncate`}>
-                    {project.roundName}
-                  </p>
-                </div>
-                <div className="text-lg sm:text-xl font-bold shrink-0">
-                  ${project.amount.toFixed(2)}
+                  <div className="flex flex-col sm:flex-row justify-between items-baseline gap-2">
+                    <h3 className="text-base sm:text-lg font-semibold truncate">
+                      {project.name.length > (window.innerWidth < 540 ? 20 : 40)
+                        ? project.name.slice(
+                            0,
+                            window.innerWidth < 540 ? 20 : 40,
+                          ) + "..."
+                        : project.name}
+                    </h3>
+                    <div className="text-base sm:text-xl font-bold shrink-0 hidden sm:block">
+                      ${project.amount.toFixed(2)}
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center mt-1">
+                    <p className={`text-xs sm:text-sm ${textStyle} truncate`}>
+                      {project.roundName}
+                    </p>
+                    <div className="text-sm sm:hidden font-bold">
+                      ${project.amount.toFixed(2)}
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

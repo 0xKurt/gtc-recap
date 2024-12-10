@@ -68,7 +68,7 @@ export function SummaryIntroSlide({
 
         <div className="space-y-6">
           <motion.h2
-            className={`text-3xl sm:text-4xl font-bold text-white`}
+            className={`text-2xl sm:text-4xl font-bold text-white mt-2`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.5 }}

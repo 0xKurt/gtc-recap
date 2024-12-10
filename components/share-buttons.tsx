@@ -43,30 +43,21 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
   };
 
   return (
-    <div className={`flex flex-wrap justify-center gap-2 ${className}`}>
+    <div className={`flex justify-center gap-2 ${className}`}>
       <Button
         variant="outline"
         size="sm"
         onClick={() => handleShare("twitter")}
-        className="w-full sm:w-auto"
+        className="w-auto sm:w-auto"
       >
         <Share2 className="w-4 h-4 mr-2" strokeWidth={1} />
         Share on Twitter
       </Button>
-      {/* <Button
-        variant="outline"
-        size="sm"
-        onClick={() => handleShare('farcaster')}
-        className="w-full sm:w-auto"
-      >
-        <Share2 className="w-4 h-4 mr-2" />
-        Share on Farcaster
-      </Button> */}
       <Button
         variant="outline"
         size="sm"
         onClick={copyLink}
-        className="w-full sm:w-auto"
+        className="w-auto sm:w-auto"
       >
         <Copy className="w-4 h-4 mr-2" strokeWidth={1} />
         Copy Link

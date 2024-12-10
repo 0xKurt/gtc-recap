@@ -73,7 +73,7 @@ export function SummarySlide({
             {/* <Globe2 className="w-12 h-12 mx-auto text-primary/80 mb-4" /> */}
           </motion.div>
           <motion.h2
-            className="text-2xl sm:text-3xl font-bold tracking-tight"
+            className="text-xl sm:text-3xl font-bold tracking-tight"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -92,7 +92,7 @@ export function SummarySlide({
 
         <div className="grid gap-4">
           <motion.div
-            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-2 sm:p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -102,7 +102,7 @@ export function SummarySlide({
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.2, duration: 0.3 }}
-              className="text-2xl sm:text-3xl font-bold mb-1"
+              className="text-xl sm:text-3xl font-bold mb-1"
             >
               {roundCount} Rounds Supported
             </motion.div>
@@ -112,7 +112,7 @@ export function SummarySlide({
           </motion.div>
 
           <motion.div
-            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-2 sm:p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -122,7 +122,7 @@ export function SummarySlide({
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.4, duration: 0.3 }}
-              className="text-2xl sm:text-3xl font-bold mb-1"
+              className="text-xl sm:text-3xl font-bold mb-1"
             >
               {projectsCount} Projects Funded
             </motion.div>
@@ -132,7 +132,7 @@ export function SummarySlide({
           </motion.div>
 
           <motion.div
-            className="bg-white/10 rounded-xl p-4 text-center perspective-1000"
+            className="bg-white/10 rounded-xl p-2 sm:p-4 text-center perspective-1000"
             initial="hidden"
             animate="visible"
             variants={flipVariants}
@@ -142,7 +142,7 @@ export function SummarySlide({
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.6, duration: 0.3 }}
-              className="text-2xl sm:text-3xl font-bold mb-1"
+              className="text-xl sm:text-3xl font-bold mb-1"
             >
               ${totalDonated.toFixed(2)}
             </motion.div>

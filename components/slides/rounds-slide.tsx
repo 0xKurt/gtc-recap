@@ -49,7 +49,7 @@ const RankBadge = ({ rank }: { rank: number }) => {
         damping: 15,
         delay: (rank - 1) * 0.2,
       }}
-      className="relative w-14 h-14 rounded-full flex items-center justify-center bg-white"
+      className="relative hidden sm:flex w-14 h-14 rounded-full items-center justify-center bg-white"
     >
       <div className="absolute w-full h-full rounded-full border-4 border-white"></div>
 
@@ -109,23 +109,31 @@ export function RoundsSlide({ address, rounds, className }: RoundsSlideProps) {
             <motion.div
               key={index}
               variants={item}
-              className="bg-white/10 rounded-xl p-4 sm:p-6 transition-colors hover:bg-white/20"
+              className="bg-white/10 rounded-xl p-3 sm:p-6 transition-colors hover:bg-white/20"
             >
               <div className="flex items-center gap-4">
                 <RankBadge rank={index + 1} />
                 <div className="flex-1">
                   <div className="flex justify-between items-baseline gap-2">
-                    <h3 className="text-lg sm:text-xl font-semibold truncate">
-                      {round.name.length > 40
-                        ? round.name.slice(0, 40) + "..."
+                    <h3 className="text-base sm:text-lg font-semibold truncate">
+                      {round.name.length > (window.innerWidth < 540 ? 30 : 40)
+                        ? round.name.slice(
+                            0,
+                            window.innerWidth < 540 ? 30 : 40,
+                          ) + "..."
                         : round.name}
                     </h3>
-                    <div className="text-xl sm:text-2xl font-bold shrink-0">
+                    <div className="text-xl hidden sm:block font-bold shrink-0">
                       ${round.totalAmount.toFixed(2)}
                     </div>
                   </div>
-                  <div className={`text-sm ${textStyle} mt-1`}>
-                    {round.projectsCount} projects supported
+                  <div className="flex justify-between items-center mt-1">
+                    <div className={`text-sm ${textStyle}`}>
+                      {round.projectsCount} projects supported
+                    </div>
+                    <div className="text-sm sm:hidden font-bold shrink-0">
+                      ${round.totalAmount.toFixed(2)}
+                    </div>
                   </div>
                 </div>
               </div>

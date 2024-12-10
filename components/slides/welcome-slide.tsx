@@ -60,7 +60,7 @@ export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
               alt="Recap logo"
               width={80}
               height={80}
-              className="mx-auto"
+              className="mx-auto w-10 h-10 sm:w-20 sm:h-20"
               priority
               placeholder="blur"
               blurDataURL={blobUrl}
@@ -68,7 +68,7 @@ export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
           </motion.div>
           <div className="space-y-4">
             <motion.h2
-              className="text-3xl sm:text-3xl font-bold tracking-tight"
+              className="text-2xl sm:text-3xl font-bold tracking-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{

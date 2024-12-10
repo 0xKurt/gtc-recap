@@ -9,7 +9,7 @@ export async function generateMetadata() {
 
   return {
     metadataBase: new URL("https://recap.gitcoin.co/"),
-    title: "Gitcoin | Recap 2024",
+    title: "Your 2024 Recap | Gitcoin",
     description: "Discover Your Gitcoin Impact",
     icons: {
       icon: "/favicon.ico",
@@ -17,7 +17,7 @@ export async function generateMetadata() {
     openGraph: {
       type: "website",
       url: "https://recap.gitcoin.co",
-      title: "Gitcoin | Recap 2024",
+      title: "Your 2024 Recap | Gitcoin",
       description: "Discover Your Gitcoin Impact",
       siteName: "Gitcoin",
       images: [
@@ -33,7 +33,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       site: "@Gitcoin",
       creator: "@Gitcoin",
-      title: "Gitcoin | Recap 2024",
+      title: "Your 2024 Recap | Gitcoin",
       description: "Discover Your Gitcoin Impact",
       images: [
         {

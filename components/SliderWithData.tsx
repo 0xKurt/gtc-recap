@@ -78,9 +78,11 @@ const SliderWithData = ({
 
       {status === "success" && recapData && (
         <div>
-          <h1 className="text-2xl font-bold text-center mb-10">
-            {params.demo ? "Preview Demo" : "Gitcoin 2024 Recap"}
-          </h1>
+          {params.demo && (
+            <h1 className="text-2xl font-bold text-center mb-10">
+              Preview Demo
+            </h1>
+          )}
           <RecapCarousel data={recapData} />
         </div>
       )}

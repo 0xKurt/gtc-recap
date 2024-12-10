@@ -19,7 +19,7 @@ dotenv.config();
 
 const publicClient = createPublicClient({
   chain: mainnet,
-  transport: http(),
+  transport: http(process.env.NEXT_PUBLIC_RPC ?? undefined),
 });
 
 const mainnetChainsIds = getChains()

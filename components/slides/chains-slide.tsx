@@ -86,7 +86,7 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight mb-2">
+          <h2 className="text-xl sm:text-4xl font-bold tracking-tight mb-2">
             {heading}
           </h2>
           <p className={`text-sm sm:text-base ${textStyle}`}>{subtext}</p>
@@ -108,7 +108,7 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
                 className="relative"
               >
                 <div className="flex items-center gap-4 mb-2">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-white to-gray-100 shadow-sm flex items-center justify-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-white to-gray-100 shadow-sm flex items-center justify-center">
                     <motion.div
                       initial={{ rotate: -10, scale: 0.9 }}
                       animate={{ rotate: 0, scale: 1 }}
@@ -122,15 +122,18 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
                       <Image
                         src={stringToBlobUrl(chain.icon)}
                         alt={chain.name}
-                        width={24}
-                        height={24}
+                        className="w-6 h-6 sm:w-8 sm:h-8"
+                        width={1}
+                        height={1}
                       />
                     </motion.div>
                   </div>
                   <div className="flex-1">
                     <div className="flex justify-between items-baseline">
-                      <h3 className="text-lg font-semibold">{chain.name}</h3>
-                      <span className="text-xl font-bold">
+                      <h3 className="text-base sm:text-lg font-semibold">
+                        {chain.name}
+                      </h3>
+                      <span className="text-base sm:text-xl font-bold">
                         ${chain.amount.toFixed(2)}
                       </span>
                     </div>
@@ -163,7 +166,9 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
           transition={{ delay: 1.2, duration: 0.5 }}
         >
           <div className={`text-sm ${textStyle}`}>Total Chain Impact</div>
-          <div className="text-3xl font-bold mt-1">${total.toFixed(2)}</div>
+          <div className="text-lg sm:text-3xl font-bold mt-1">
+            ${total.toFixed(2)}
+          </div>
         </motion.div>
       </div>
     </Card>
