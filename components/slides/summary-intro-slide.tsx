@@ -26,9 +26,6 @@ export function SummaryIntroSlide({
   const textRnd = pR(address, "ChainsSlide-0", textStyles.length);
   const textStyle = textStyles[textRnd];
 
-  const textRnd2 = pR(address, "ChainsSlide-2", textStyles.length);
-  const textStyle2 = textStyles[textRnd2];
-
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}

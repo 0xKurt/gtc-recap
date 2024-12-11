@@ -40,9 +40,6 @@ export function ProjectsIntroSlide({
   const textRnd = pR(address, "ProjectsIntroSlide-1", textStyles.length);
   const textStyle = textStyles[textRnd];
 
-  const textRnd2 = pR(address, "ProjectsIntroSlide-2", textStyles.length);
-  const textStyle2 = textStyles[textRnd2];
-
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -100,7 +97,7 @@ export function ProjectsIntroSlide({
             <div className={`text-3xl sm:text-5xl font-bold ${textStyle}`}>
               {projectsCount}
             </div>
-            <div className={`text-xl ${textStyle2}`}>{heading}</div>
+            <div className={`text-xl ${textStyle}`}>{heading}</div>
           </motion.div>
 
           <motion.p
@@ -117,7 +114,7 @@ export function ProjectsIntroSlide({
           </motion.p>
 
           <motion.p
-            className={`leading-relaxed ${textStyle2}`}
+            className={`leading-relaxed ${textStyle}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.7, duration: 0.5 }}

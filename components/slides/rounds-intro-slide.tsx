@@ -29,9 +29,6 @@ export function RoundsIntroSlide({
   const textRnd = pR(address, "RoundsIntroSlide-0", textStyles.length);
   const textStyle = textStyles[textRnd];
 
-  const textRnd2 = pR(address, "RoundsIntroSlide-2", textStyles.length);
-  const textStyle2 = textStyles[textRnd2];
-
   return (
     <Card
       className={`${className} flex items-center justify-center p-4 sm:p-6`}
@@ -96,7 +93,7 @@ export function RoundsIntroSlide({
           </motion.p>
 
           <motion.p
-            className={`leading-relaxed ${textStyle2}`}
+            className={`leading-relaxed ${textStyle}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.5 }}
