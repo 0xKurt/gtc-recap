@@ -1,8 +1,8 @@
 export const slideStyles = [
   "bg-[#0C2725]",
-  "bg-[#1E433F]",
-  "bg-[#1F504A]",
-  "bg-[#22635A]",
+  // "bg-[#1E433F]",
+  // "bg-[#1F504A]",
+  // "bg-[#22635A]",
 ];
 
 export const textStyles = [

@@ -153,7 +153,9 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
 
   return (
     <div className="flex flex-col items-center w-full px-2 sm:px-4">
-      <div className="w-full max-w-4xl mx-auto aspect-[3/4] sm:aspect-[16/10] relative overflow-hidden rounded-xl shadow-xl">
+      <div
+        className={`w-full max-w-4xl mx-auto aspect-[3/4] sm:aspect-[16/10] relative overflow-hidden rounded-xl shadow-xl ${slideStyles[0]}`}
+      >
         <Button
           size="icon"
           onClick={() => setIsPlaying(!isPlaying)}
@@ -178,7 +180,7 @@ export function RecapCarousel({ data }: RecapCarouselProps) {
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 },
             }}
-            className="absolute w-full h-full"
+            className={`absolute w-full h-full ${slideStyles[0]}`}
           >
             {slides[page]}
           </motion.div>
