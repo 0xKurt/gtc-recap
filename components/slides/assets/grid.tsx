@@ -1,110 +1,43 @@
-export const grid = `<svg
-    width="1378"
-    height="723"
-    viewBox="0 0 1378 723"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <g clip-path="url(#clip0_5024_971)">
-      <path
-        d="M38.8994 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M120.585 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M207.172 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M298.956 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M396.246 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M499.371 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M608.684 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M724.558 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M847.385 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M977.579 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M1115.58 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M1261.87 -38.252V1415.75"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 38.811H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 120.496H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 207.083H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 298.867H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 396.157H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 499.282H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-      <path
-        d="M-38.1631 608.595H1415.84"
-        stroke="#D5F2EA20"
-        stroke-width="0.982651"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_5024_971">
-        <rect width="1377.68" height="722.248" fill="white" />
-      </clipPath>
-    </defs>
-  </svg>`;
+export const grid = `
+<svg width="777" height="643" viewBox="0 0 777 643" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M68 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M135.67 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M204.017 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M273.047 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M342.768 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M413.185 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M484.307 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M556.14 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M628.691 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M701.969 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M775.978 1.48193V642" stroke="#D5F2EA10"/>
+<path d="M1 642H775.978" stroke="#D5F2EA10"/>
+<path d="M1 641.047H775.978" stroke="#D5F2EA10"/>
+<path d="M1 639.893H775.978" stroke="#D5F2EA10"/>
+<path d="M1 638.496H775.978" stroke="#D5F2EA10"/>
+<path d="M1 636.807H775.978" stroke="#D5F2EA10"/>
+<path d="M1 634.763H775.978" stroke="#D5F2EA10"/>
+<path d="M1 632.289H775.978" stroke="#D5F2EA10"/>
+<path d="M1 629.296H775.978" stroke="#D5F2EA10"/>
+<path d="M1 625.674H775.978" stroke="#D5F2EA10"/>
+<path d="M1 621.292H775.978" stroke="#D5F2EA10"/>
+<path d="M1 615.99H775.978" stroke="#D5F2EA10"/>
+<path d="M1 609.574H775.978" stroke="#D5F2EA10"/>
+<path d="M1 601.811H775.978" stroke="#D5F2EA10"/>
+<path d="M1 592.417H775.978" stroke="#D5F2EA10"/>
+<path d="M1 581.052H775.978" stroke="#D5F2EA10"/>
+<path d="M1 567.299H775.978" stroke="#D5F2EA10"/>
+<path d="M1 550.657H775.978" stroke="#D5F2EA10"/>
+<path d="M1 530.521H775.978" stroke="#D5F2EA10"/>
+<path d="M1 506.157H775.978" stroke="#D5F2EA10"/>
+<path d="M1 476.678H775.978" stroke="#D5F2EA10"/>
+<path d="M1 441.005H775.978" stroke="#D5F2EA10"/>
+<path d="M1 397.843H775.978" stroke="#D5F2EA10"/>
+<path d="M1 345.616H775.978" stroke="#D5F2EA10"/>
+<path d="M1 282.423H775.978" stroke="#D5F2EA10"/>
+<path d="M1 205.957H775.978" stroke="#D5F2EA10"/>
+<path d="M1 113.434H775.978" stroke="#D5F2EA10"/>
+<path d="M1 1.48193H775.978" stroke="#D5F2EA10"/>
+</svg>
+`;
