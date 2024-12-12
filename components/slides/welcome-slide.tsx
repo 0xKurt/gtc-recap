@@ -91,7 +91,11 @@ export function WelcomeSlide({ address, ens, className }: WelcomeSlideProps) {
                 text={subtext}
                 placeholder="<userAddress>"
                 replacement={
-                  <span className="text-base font-mono">{ens || address}</span>
+                  <span className="text-base font-mono">
+                    {ens || window.innerWidth < 540
+                      ? address.slice(0, 6) + "..." + address.slice(-4)
+                      : address}
+                  </span>
                 }
               />
             </motion.p>

@@ -7,29 +7,35 @@ import { useToast } from '@/hooks/use-toast';
 interface ShareButtonsProps {
   totalDonated: number;
   projectsCount: number;
+  disabled?: boolean;
   className?: string;
 }
 
-export function ShareButtons({ totalDonated, projectsCount, className = '' }: ShareButtonsProps) {
+export function ShareButtons({
+  totalDonated,
+  projectsCount,
+  className = "",
+  disabled = false,
+}: ShareButtonsProps) {
   const { toast } = useToast();
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "";
 
-  const handleShare = async (platform: 'twitter' | 'farcaster') => {
+  const handleShare = async (platform: "twitter" | "farcaster") => {
     const text = `I've donated $${totalDonated.toFixed(
       2,
     )} to ${projectsCount} projects! Check out my @Gitcoin Grants impact! 🌟 #2024withGitcoin\n\n`;
 
-    if (platform === 'twitter') {
+    if (platform === "twitter") {
       window.open(
         `https://twitter.com/intent/tweet?text=${encodeURIComponent(
-          text
+          text,
         )}&url=${encodeURIComponent(shareUrl)}`,
-        '_blank'
+        "_blank",
       );
     } else {
       toast({
-        title: 'Coming Soon',
-        description: 'Farcaster sharing will be available soon!',
+        title: "Coming Soon",
+        description: "Farcaster sharing will be available soon!",
       });
     }
   };
@@ -37,8 +43,8 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
   const copyLink = () => {
     navigator.clipboard.writeText(shareUrl);
     toast({
-      title: 'Link Copied',
-      description: 'The link has been copied to your clipboard!',
+      title: "Link Copied",
+      description: "The link has been copied to your clipboard!",
     });
   };
 
@@ -49,6 +55,7 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
         size="sm"
         onClick={() => handleShare("twitter")}
         className="w-auto sm:w-auto"
+        disabled={disabled}
       >
         <Share2 className="w-4 h-4 mr-2" strokeWidth={1} />
         Share on Twitter
@@ -58,6 +65,7 @@ export function ShareButtons({ totalDonated, projectsCount, className = '' }: Sh
         size="sm"
         onClick={copyLink}
         className="w-auto sm:w-auto"
+        disabled={disabled}
       >
         <Copy className="w-4 h-4 mr-2" strokeWidth={1} />
         Copy Link

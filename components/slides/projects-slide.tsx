@@ -108,7 +108,13 @@ export function ProjectsSlide({
                   </div>
                   <div className="flex justify-between items-center mt-1">
                     <p className={`text-xs sm:text-sm ${textStyle} truncate`}>
-                      {project.roundName}
+                      {project.roundName.length >
+                      (window.innerWidth < 540 ? 25 : 40)
+                        ? project.roundName.slice(
+                            0,
+                            window.innerWidth < 540 ? 25 : 40,
+                          ) + "..."
+                        : project.roundName}
                     </p>
                     <div className="text-sm sm:hidden font-bold">
                       ${project.amount.toFixed(2)}

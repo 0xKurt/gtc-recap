@@ -22,7 +22,7 @@ const SliderWithData = ({
         const data = await fetchRecapData(params.address);
         console.log(data);
         console.log("data:", data);
-        if (data) {
+        if (data && data.rounds.length > 0) {
           setRecapData(data);
           setStatus("success");
         } else {

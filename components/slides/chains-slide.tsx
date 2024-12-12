@@ -96,7 +96,7 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-6"
+          className="space-y-4 sm:space-y-6"
         >
           {chains.map((chain, index) => {
             const percent = (chain.amount / total) * 100;
@@ -160,7 +160,7 @@ export function ChainsSlide({ address, chains, className }: ChainsSlideProps) {
         </motion.div>
 
         <motion.div
-          className="mt-8 pt-6 border-t text-center"
+          className="mt-4 pt-3 sm:mt-8 sm:pt-6 border-t text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.8 }}
           transition={{ delay: 1.2, duration: 0.5 }}

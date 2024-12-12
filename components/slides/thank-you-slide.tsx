@@ -87,6 +87,9 @@ export function ThankYouSlide({
             <ShareButtons
               totalDonated={totalDonated}
               projectsCount={projectsCount}
+              disabled={
+                address === "0x1234567890abcdef1234567890abcdef12345678"
+              }
             />
           </div>
         </div>
